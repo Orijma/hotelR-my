@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-11-25 09:37:14
+/* Smarty version 4.3.4, created on 2024-11-25 12:50:29
   from 'C:\wamp64\www\hotelR-my\public\left.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_6744454a2094c4_89088287',
+  'unifunc' => 'content_6744729502a725_51212916',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '2469f23cf577148dff5e47339b2b5643e42cf98e' => 
     array (
       0 => 'C:\\wamp64\\www\\hotelR-my\\public\\left.tpl',
-      1 => 1732526794,
+      1 => 1732538552,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6744454a2094c4_89088287 (Smarty_Internal_Template $_smarty_tpl) {
+function content_6744729502a725_51212916 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Left Panel -->
 
     <aside id="left-panel" class="left-panel">
@@ -56,7 +56,8 @@ function content_6744454a2094c4_89088287 (Smarty_Internal_Template $_smarty_tpl)
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#A VOUS D'ECRIRE LE LIEN" > <i class="menu-icon fa fa-th"></i>Mon profil</a>
+                        <a href="index.php?gestion=profil" > <i class="menu-icon fa fa-th"></i>Mon profil : <?php echo $_SESSION['username'];?>
+</a>
                         
                     </li>
 

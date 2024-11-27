@@ -24,6 +24,9 @@ class connexion {
                 case 'logout':
                     $this->oControleur->logout();
                     break;
+                case 'profil' : 
+                    $this->oControleur->profil();
+                    break;
                 case 'form_register':
                     $this->oControleur->form_register();
                     break;

@@ -33,7 +33,7 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="#A VOUS D'ECRIRE LE LIEN" > <i class="menu-icon fa fa-th"></i>Mon profil</a>
+                        <a href="index.php?gestion=profil" > <i class="menu-icon fa fa-th"></i>Mon profil : {$smarty.session.username}</a>
                         
                     </li>
 

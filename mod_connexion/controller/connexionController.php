@@ -29,11 +29,17 @@ class connexionControleur {
         $result = $this->oModele->registerUser();
         if($result) {
             // Redirection vers la page de connexion avec message de succès
-            header('Location: index.php?gestion=connexion&action=form_login&success=1');
+            header(header: 'Location: index.php?gestion=connexion&action=form_login&success=1');
         } else {
             // Redirection vers le formulaire avec message d'erreur
             header('Location: index.php?gestion=connexion&action=form_login&error=2');
         }
+    }
+
+    public function profil() {
+        $userData = $this->oModele->getUserData($_SESSION['user']['id']);
+        $this->oVue->genererAffichageProfil($userData);
+
     }
 
     public function logout() {

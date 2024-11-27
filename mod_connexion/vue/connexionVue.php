@@ -33,9 +33,14 @@ class connexionVue {
         }
     }
 
-    public function genererAffichageLogin() {
+    public function genererAffichageProfil($userData) {
         $this->chargementValeurs();
-        $this->tpl->assign('titrePage', 'Connexion au système');
-        $this->tpl->display('mod_connexion/vue/connexionVue.tpl');
+        $this->tpl->assign('user', $userData);
+        $this->tpl->assign('titrePage', 'Mon Profil');
     }
+    
+public function genererAffichageProfil($userData) {
+   $this->chargementValeurs();
+   $this->tpl->assign('user', $userData);
+   $this->tpl->assign('titrePage', 'Mon Profil');
 }
