@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-11-25 10:02:15
+/* Smarty version 4.3.4, created on 2024-11-27 16:58:58
   from 'C:\wamp64\www\hotelR-my\mod_paymenttypes\vue\paymenttypesListeVue.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_67444b27650953_81520439',
+  'unifunc' => 'content_67474fd2e8f479_42595310',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ee95d3e2914995eb713aeeaf3cd8e3af0f0087f5' => 
     array (
       0 => 'C:\\wamp64\\www\\hotelR-my\\mod_paymenttypes\\vue\\paymenttypesListeVue.tpl',
-      1 => 1732526791,
+      1 => 1732726725,
       2 => 'file',
     ),
   ),
@@ -22,7 +22,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:public/header.tpl' => 1,
   ),
 ),false)) {
-function content_67444b27650953_81520439 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67474fd2e8f479_42595310 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!doctype html>
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->

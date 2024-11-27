@@ -14,7 +14,6 @@ class connexionModele extends modele {
         $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
         return $this->executeRequete($sql, array($username, $email, $password));
     }
-
     public function loginUser() {
         if (!isset($this->parametre['username']) || !isset($this->parametre['password'])) {
             return false;

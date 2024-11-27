@@ -20,7 +20,7 @@ class PaymenttypesModele extends modele
     public function getListePaymenttypes()
     {
 
-        $sql = "SELECT * FROM Paymenttypes";
+        $sql = "SELECT * FROM paymenttypes";
 
         $resultat = $this->executeRequete($sql);
 
@@ -45,7 +45,7 @@ class PaymenttypesModele extends modele
 
     public function getUnPaymenttype(){
 
-        $sql = "SELECT * FROM Paymenttypes WHERE Payment = ?";
+        $sql = "SELECT * FROM paymenttypes WHERE payment = ?";
 
         $resultat = $this->executeRequete($sql, array($this->parametre['Payment']));
 
@@ -55,7 +55,7 @@ class PaymenttypesModele extends modele
     }
 
     public function addPaymenttype(){
-        $sql = "SELECT MAX(Payment) AS idmax FROM paymenttypes" ;
+        $sql = "SELECT MAX(payment) AS idmax FROM paymenttypes" ;
         $result = $this->executeRequete($sql);
         $id = $result->fetch(PDO::FETCH_ASSOC);
         $lastid = $id["idmax"]+1;

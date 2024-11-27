@@ -29,6 +29,15 @@ class connexionControleur {
             }
         }
 
+        public function register() {
+            $result = $this->oModele->registerUser();
+            if($result) {
+                header('Location: index.php?gestion=connexion&action=form_login&success=1');
+            } else {
+                header('Location: index.php?gestion=connexion&action=form_login&error=2');
+            }
+        }
+
     public function logout() {
         session_destroy();
         header('Location: index.php?gestion=connexion&action=form_login');
