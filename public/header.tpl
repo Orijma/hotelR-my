@@ -25,10 +25,19 @@
                         </a>
 
                         <div class="user-menu dropdown-menu">
-<a class="nav-link" href="index.php?gestion=connexion&action=form_login"><i class="fa fa-power -off"></i>connexion</a>                        </div>
+                        {if isset($smarty.session.username)}
+                            <a class="nav-link" href="index.php?gestion=connexion&action=logout"><i class="fa fa-power -off"></i>deconnexion</a>                        </div>
+                        {else}
+                            <a class="nav-link" href="index.php?gestion=connexion&action=login"><i class="fa fa-power -off"></i>connexion</a>                        </div>
+                        {/if}
                     </div>
                         <div class="user-area">
-                        Bienvenue {$smarty.session.username}
+                        {if isset($smarty.session.username)}
+                             Bienvenue {$smarty.session.username}
+                        {else}
+                             Bienvenue ! 
+                         {/if}
+
                         </div>
 
                 </div>

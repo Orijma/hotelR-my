@@ -16,15 +16,28 @@ class connexionModele extends modele {
     }
 
     public function loginUser() {
-        $sql = "SELECT * FROM users WHERE username = ?";
-        $resultat = $this->executeRequete($sql, array($this->parametre['username']));
+        if (!isset($this->parametre['username']) || !isset($this->parametre['password'])) {
+            return false;
+        }
+
+        $username = htmlspecialchars($this->parametre['username']);
+        $password = $this->parametre['password'];
+
+        $sql = "SELECT id, username, password FROM users WHERE username = ?";
+        $resultat = $this->connexion->executeRequete($sql, array($username));
         
-        if($resultat->rowCount() > 0) {
+        if ($resultat->rowCount() > 0) {
             $user = $resultat->fetch(PDO::FETCH_ASSOC);
-            if(password_verify($this->parametre['password'], $user['password'])) {
-                return $user;
+            
+            if (password_verify($password, $user['password'])) {
+                return array(
+                    'id' => $user['id'],
+                    'username' => $user['username']
+                );
             }
         }
+        
         return false;
     }
+
 }

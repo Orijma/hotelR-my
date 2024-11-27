@@ -33,8 +33,12 @@
                         </ul>
                     </li>
                     <li class="dropdown">
-                        <a href="index.php?gestion=profil" > <i class="menu-icon fa fa-th"></i>Mon profil : {$smarty.session.username}</a>
-                        
+                        {if isset($smarty.session.username)}
+                            <a href="index.php?gestion=profil" > <i class="menu-icon fa fa-th"></i>Mon profil : {$smarty.session.username}</a>
+                        {else}
+                            <a href="index.php?gestion=profil" > <i class="menu-icon fa fa-th"></i>Inscrivez-vous</a>
+                        {/if}
+
                     </li>
 
                     <h3 class="menu-title">xxxxx</h3><!-- /.menu-title -->

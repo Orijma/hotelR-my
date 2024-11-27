@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.4, created on 2024-11-25 10:28:07
+/* Smarty version 4.3.4, created on 2024-11-27 12:49:44
   from 'C:\wamp64\www\hotelR-my\public\header.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.4',
-  'unifunc' => 'content_67445137a96307_83062410',
+  'unifunc' => 'content_67471568068b25_27640280',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'cae8045d094f614525bced8bff3f77f233d13a4a' => 
     array (
       0 => 'C:\\wamp64\\www\\hotelR-my\\public\\header.tpl',
-      1 => 1732530484,
+      1 => 1732711780,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_67445137a96307_83062410 (Smarty_Internal_Template $_smarty_tpl) {
+function content_67471568068b25_27640280 (Smarty_Internal_Template $_smarty_tpl) {
 ?>       <!-- Header-->
         <header id="header" class="header">
 
@@ -48,10 +48,19 @@ function content_67445137a96307_83062410 (Smarty_Internal_Template $_smarty_tpl)
                         </a>
 
                         <div class="user-menu dropdown-menu">
-<a class="nav-link" href="index.php?gestion=connexion&action=form_login"><i class="fa fa-power -off"></i>connexion</a>                        </div>
+                        <?php if ((isset($_SESSION['username']))) {?>
+                            <a class="nav-link" href="index.php?gestion=connexion&action=logout"><i class="fa fa-power -off"></i>deconnexion</a>                        </div>
+                        <?php } else { ?>
+                            <a class="nav-link" href="index.php?gestion=connexion&action=login"><i class="fa fa-power -off"></i>connexion</a>                        </div>
+                        <?php }?>
                     </div>
                         <div class="user-area">
-                        Bienvenue <?php echo $_SESSION['username'];?>
+                        <?php if ((isset($_SESSION['username']))) {?>
+                             Bienvenue <?php echo $_SESSION['username'];?>
+
+                        <?php } else { ?>
+                             Bienvenue ! 
+                         <?php }?>
 
                         </div>
 
